@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertisseur Binaire</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <br>
+    <h1>Convertisseur Binaire</h1>
+    <div class="container">
+      <div class="arrows">
+        <button id="shift-left" class="arrow" onclick="shift('left')">&#9664;</button>
+      </div>
+      <div id="binaire-container">
+        <!-- Les bits et positions seront injectés ici par JavaScript -->
+      </div>
+      <div class="arrows">
+        <button id="shift-right" class="arrow" onclick="shift('right')">&#9654;</button>
+      </div>
+    </div>
+    <br>
+    <div class="decimal-valeur">
+      Valeur décimale : <span id="decimal-valeur"></span><br>
+      Valeur octale : 0<span id="octal-valeur"></span><br>
+      Valeur hexadécimale : 0x<span id="hex-valeur"></span><br>
+      Valeur négative : <span id="negative-valeur"></span><br>
+      Caractère ASCII/cp1252: <span id="cp1252-valeur"></span>
+    </div>
+  </div>
+  <div id="info-logo">
+    <div id="info-icon">i</div>
+    <span id="info-tooltip">Ce site est un Convertisseur de Chiffre Binaire !</span>
+  </div>
+
+  <div id="theme-toggle">
+    <label for="theme-switch" class="toggle">
+      <input type="checkbox" id="theme-switch">
+      <div class="toggle-icon sun">&#9728;</div>
+      <div class="toggle-icon moon">&#127770;</div>
+    </label>
+  </div>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

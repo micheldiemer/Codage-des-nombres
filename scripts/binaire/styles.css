@@ -1,0 +1,248 @@
+/* Styles communs */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7e9be;
+    transition: background-color 0.3s;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #f5eed7;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff; /* Cadre blanc */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    background-color: #fff; /* Fond blanc à l'intérieur du cadre */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
+    color: #333; /* Couleur du texte par défaut */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Espacement du titre par rapport au cadre */
+    background-color: #fff; /* Fond blanc pour la zone des bits */
+    padding: 20px; /* Espacement interne */
+}
+
+.body.dark-theme .wrapper {
+    background-color: #333; /* Fond sombre à l'intérieur du cadre en mode sombre */
+    color: #f5eed7; /* Couleur du texte en mode sombre */
+}
+
+.body.dark-theme .container {
+    background-color: #333; /* Fond sombre pour la zone des bits en mode sombre */
+    color: #f5eed7; /* Couleur du texte en mode sombre */
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.feather {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+    transition: fill 0.3s ease;
+}
+
+#shift-left .feather {
+    transform: rotateY(180deg);
+}
+
+#binaire-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.bit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bit {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.bit.bit-0 {
+    border-color: rgb(153, 6, 6);
+    background-color: rgb(245, 102, 102);
+}
+
+.bit.bit-1 {
+    border-color: #008000;
+    background-color: rgb(133, 250, 133);
+}
+
+.bit.clicked {
+    transform: scale(1.1);
+}
+
+.positions span {
+    text-align: center;
+    width: 60px;
+    font-size: 1em;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.decimal-valeur {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px; /* Espacement entre la calculatrice et la valeur décimale */
+}
+
+#info-logo {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: help;
+}
+
+#info-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+#info-tooltip {
+    display: none;
+    max-width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#info-logo:hover #info-tooltip {
+    display: block;
+}
+
+#copyright {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#copyright-content {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+#theme-toggle {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 2px;
+    left: 2px;
+    background-size: cover;
+    transition: transform 0.3s ease;
+}
+
+.toggle .sun {
+    font-size: 24px;
+}
+
+.toggle .moon {
+    font-size: 24px;
+    transform: translateX(30px);
+}
+
+.toggle input:checked + .toggle-icon {
+    transform: translateX(30px);
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.bit.move-up {
+    transform: translateY(-10px);
+}
+
+.bit.move-down {
+    transform: translateY(10px);
+}

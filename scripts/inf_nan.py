@@ -1,0 +1,30 @@
+v_p0 = 0 * 1.1
+v_m0 = 0 * -1.1
+print("-"*80)
+print("zéro positif : 0 *  1.1 =  ", v_p0)
+print("zéro négatif : 0 * -1.1 = ", v_m0)
+print("-"*80)
+v_pinf = float(10e309)
+v_minf = -float(10e309)
+print("infini positif :  ", v_pinf)
+print("infini négatif : ", v_minf)
+print("-"*80)
+v_nan = v_pinf + v_minf
+print("(inf) + (-inf) = ", v_nan)
+print("-"*80)
+print("inf * -10 = ", v_pinf * -10)
+print("-inf * -10 = ", v_minf * -10)
+print("inf / inf = ", v_pinf / v_pinf)
+print("-"*80)
+print("nan = not a number = valeur inconnue")
+print("nan - nan : ", v_nan - v_nan)
+print("nan == nan : ", v_nan == v_nan)
+print("nan != nan : ", v_nan != v_nan)
+print("inf > -inf : ", v_pinf > v_minf)
+print("nan > 1 : ", v_nan > 1)
+print("nan < 1 : ", v_nan < 1)
+print("1 > nan : ", 1 > v_nan)
+print("1 < nan : ", 1 < v_nan)
+
+print("-"*80)
+
